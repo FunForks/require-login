@@ -12,7 +12,7 @@ const Personal = (props) => {
       <h2>Welcome {username}</h2>
       <p>You can only see this page if you are logged in.</p>
       <button
-        onClick={() => logIn()}
+        onClick={logIn}
       >
         Log Out
       </button>

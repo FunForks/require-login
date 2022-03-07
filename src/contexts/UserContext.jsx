@@ -11,15 +11,22 @@ export const UserProvider = ({children}) => {
   const navigate = useNavigate()
   
   // Define the currently logged in user
-  const [ loggedInUser, setLoggedInUser ] = useState()
+  const [ loggedInUser, setLoggedInUser ] = useState("")
   // Read username from URL if a direct connection is attempted
   const [ urlUser, setUrlUser ] = useState()
 
-  // logIn works as log out if userName is empty or undefined
-  const logIn = (userName="") => {    
-    setLoggedInUser(userName)
-    // Redirect either to the Welcome page or the user's page
-    navigate(`/${userName}`, { replace: true })
+  // logIn works as log out if username is not a string
+  const logIn = (username) => {  
+    if (typeof username !== "string") {
+      // Will be an event object if called from the Log Out button
+      // on the Personal page
+      username = ""
+    }
+
+    setLoggedInUser(username)
+    // Redirect either to the Welcome page ("/") or
+    // the user's page ("/username")
+    navigate(`/${username}`, { replace: true })
   }
 
   return (
@@ -27,8 +34,8 @@ export const UserProvider = ({children}) => {
       value ={{
         loggedInUser,
         logIn,
-        setUrlUser,
-        urlUser
+        urlUser,
+        setUrlUser
       }}
     >
       {children}

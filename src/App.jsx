@@ -1,5 +1,5 @@
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
   Navigate
@@ -20,13 +20,15 @@ import Personal from './routes/Personal'
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <UserProvider>
         <Routes>
           <Route path="/" element={<Home />}>
-          <Route index element={<Welcome />} />
-          <Route path="*" element={<Navigate to="/" />} />
+
+            <Route index element={<Welcome />} />
+
             <Route path="login" element={<Login />} />
+
             <Route
               path=":username"
               element={
@@ -35,10 +37,14 @@ function App() {
                 </RequireLogin>
               }
             />
-         </Route>
+          
+          </Route>
+
+          <Route path="*" element={<Navigate to="/" />} />
+
         </Routes>
       </UserProvider>
-    </Router>
+    </BrowserRouter>
   );
 }
 
