@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /**
  * Context allows you to share state variables and setter
  * functions across multiple components, without having to pass
@@ -76,7 +74,7 @@
  * value may be read in from the "/:username" path (see App.jsx)
  */
 
->>>>>>> 01c77fd (Improve README.md)
+
 import { createContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
