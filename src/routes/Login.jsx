@@ -1,3 +1,7 @@
+/**
+ * 
+ */
+
 import { useState, useContext } from 'react'
 import { UserContext } from '../contexts/UserContext'
 
@@ -30,7 +34,6 @@ const Login = () => {
         Log in as: 
         <input
           type="text"
-          name="login"
           id="login"
           value={userName}
           onChange={updateUsername}
