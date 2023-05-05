@@ -2,7 +2,7 @@
 
 A simplistic app where custom content is only available after the user logs in.
 
-See the demo [here](https://dciforks.github.io/login).
+See the demo [here](https://funforks.github.io/login).
 
 It contains three pages:
 
