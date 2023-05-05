@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/require-login/static/js/main.e310fcfc.js",
-    "index.html": "/require-login/index.html",
-    "main.e310fcfc.js.map": "/require-login/static/js/main.e310fcfc.js.map"
+    "main.js": "/login/static/js/main.e310fcfc.js",
+    "index.html": "/login/index.html",
+    "main.e310fcfc.js.map": "/login/static/js/main.e310fcfc.js.map"
   },
   "entrypoints": [
     "static/js/main.e310fcfc.js"
